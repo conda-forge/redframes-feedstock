@@ -1,11 +1,11 @@
-About redframes
-===============
+About redframes-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/redframes-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/maxhumber/redframes
 
 Package license: BSD-2-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/redframes-feedstock/blob/main/LICENSE.txt)
 
 Summary: General Purpose Data Manipulation Library
 
