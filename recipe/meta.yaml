@@ -1,5 +1,5 @@
 {% set name = "redframes" %}
-{% set version = "1.4" %}
+{% set version = "1.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/redframes-{{ version }}.tar.gz
-  sha256: cdd1b1d1f7a6cc6422a38767bf17c2b61526ba3200865dce6321f95a99854434
+  sha256: a340a7b9e1b09b5e32967e67fecef5b0e7026a9c0c379ab8ec872f0ba2d7b5a4
 
 build:
   noarch: python
