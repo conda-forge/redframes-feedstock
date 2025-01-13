@@ -6,35 +6,31 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/redframes-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/redframes-{{ version }}.tar.gz
   sha256: a340a7b9e1b09b5e32967e67fecef5b0e7026a9c0c379ab8ec872f0ba2d7b5a4
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
+    - setuptools
   run:
     - pandas >=1.5,<2.0
-    - python >=3.9
+    - python >={{ python_min }}
 
 test:
-  source_files:
-    - tests
   imports:
     - redframes
   commands:
     - pip check
-    - pytest -vvv --capture=tee-sys tests
   requires:
-    - matplotlib-base
     - pip
-    - pytest
-    - scikit-learn
+    - python {{ python_min }}
 
 about:
   home: https://github.com/maxhumber/redframes
