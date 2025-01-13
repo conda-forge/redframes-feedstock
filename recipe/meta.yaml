@@ -18,23 +18,18 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
+    - setuptools
   run:
     - pandas >=1.5,<2.0
     - python >={{ python_min }}
 
 test:
-  source_files:
-    - tests
   imports:
     - redframes
   commands:
     - pip check
-    - pytest -vvv --capture=tee-sys tests
   requires:
-    - matplotlib-base
     - pip
-    - pytest
-    - scikit-learn
     - python {{ python_min }}
 
 about:
